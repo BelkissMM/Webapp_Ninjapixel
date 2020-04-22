@@ -9,7 +9,7 @@ Test Teardown   Encerra sessão
 ${login_user}           papito@ninjapixel.com
 ${login_passw}          pwd123
 ${login_usu_wrong}      papito@ninjapixel.com       
-${login_passw_wrong}    pwd1234
+${login_passw_wrong}    abc123
 ${message}              Usuário e/ou senha inválidos
 
 ***Test Cases***
@@ -18,7 +18,6 @@ Login com sucesso
     Input Text                  id=emailId                  ${login_user}
     Input Text                  id:passId                   ${login_passw}
     Click Button                Entrar
-    Sleep                       3
     Wait Until Page Contains    Papito  
     Sleep                       3
 
