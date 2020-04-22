@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200422 13:57:30.985" rpa="false">
+<suite id="s1" name="Tests" source="c:\qaninja\robot\ninjapixel\tests">
+<suite id="s1-s1" name="Login1" source="c:\qaninja\robot\ninjapixel\tests\login1.robot">
+<test id="s1-s1-t1" name="Login com sucesso">
+<kw name="Nova sessão" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200422 13:57:31.405" level="INFO">Opening browser 'chrome' to base url 'http://pixel-web:3000/login'.</msg>
+<status status="PASS" starttime="20200422 13:57:31.405" endtime="20200422 13:57:40.144"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:57:31.404" endtime="20200422 13:57:40.144"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200422 13:57:40.147" level="INFO">Opening url 'http://pixel-web:3000/login'</msg>
+<status status="PASS" starttime="20200422 13:57:40.146" endtime="20200422 13:57:41.402"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=emailId</arg>
+<arg>${login_user}</arg>
+</arguments>
+<msg timestamp="20200422 13:57:41.409" level="INFO">Typing text 'papito@ninjapixel.com' into text field 'id=emailId'.</msg>
+<status status="PASS" starttime="20200422 13:57:41.408" endtime="20200422 13:57:45.186"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passId</arg>
+<arg>${login_passw}</arg>
+</arguments>
+<msg timestamp="20200422 13:57:45.196" level="INFO">Typing text 'pwd123' into text field 'id:passId'.</msg>
+<status status="PASS" starttime="20200422 13:57:45.196" endtime="20200422 13:57:45.423"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Entrar</arg>
+</arguments>
+<msg timestamp="20200422 13:57:45.424" level="INFO">Clicking button 'Entrar'.</msg>
+<status status="PASS" starttime="20200422 13:57:45.424" endtime="20200422 13:57:45.594"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200422 13:57:48.598" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200422 13:57:45.595" endtime="20200422 13:57:48.598"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Papito</arg>
+</arguments>
+<status status="PASS" starttime="20200422 13:57:48.599" endtime="20200422 13:57:48.632"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200422 13:57:51.634" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200422 13:57:48.632" endtime="20200422 13:57:51.634"></status>
+</kw>
+<kw name="Encerra sessão" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200422 13:57:51.957" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200422 13:57:51.636" endtime="20200422 13:57:51.957"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200422 13:57:51.958" endtime="20200422 13:57:54.298"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:57:51.635" endtime="20200422 13:57:54.298"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:57:31.404" endtime="20200422 13:57:54.301" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Senha incorreta">
+<kw name="Nova sessão" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200422 13:57:54.312" level="INFO">Opening browser 'chrome' to base url 'http://pixel-web:3000/login'.</msg>
+<status status="PASS" starttime="20200422 13:57:54.311" endtime="20200422 13:58:00.525"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:57:54.309" endtime="20200422 13:58:00.525"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200422 13:58:00.526" level="INFO">Opening url 'http://pixel-web:3000/login'</msg>
+<status status="PASS" starttime="20200422 13:58:00.526" endtime="20200422 13:58:01.890"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=emailId</arg>
+<arg>${login_usu_wrong}</arg>
+</arguments>
+<msg timestamp="20200422 13:58:01.892" level="INFO">Typing text 'papito@ninjapixel.com' into text field 'id=emailId'.</msg>
+<status status="PASS" starttime="20200422 13:58:01.892" endtime="20200422 13:58:04.234"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passId</arg>
+<arg>${login_passw_wrong}</arg>
+</arguments>
+<msg timestamp="20200422 13:58:04.242" level="INFO">Typing text 'pwd1234' into text field 'id:passId'.</msg>
+<status status="PASS" starttime="20200422 13:58:04.242" endtime="20200422 13:58:04.557"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Entrar</arg>
+</arguments>
+<msg timestamp="20200422 13:58:04.558" level="INFO">Clicking button 'Entrar'.</msg>
+<status status="PASS" starttime="20200422 13:58:04.558" endtime="20200422 13:58:04.733"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>Usuário e/ou senha inválidos</arg>
+</arguments>
+<status status="PASS" starttime="20200422 13:58:04.739" endtime="20200422 13:58:04.740"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200422 13:58:07.919" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200422 13:58:04.748" endtime="20200422 13:58:07.921"></status>
+</kw>
+<kw name="Encerra sessão" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200422 13:58:09.099" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200422 13:58:07.927" endtime="20200422 13:58:09.099"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200422 13:58:09.099" endtime="20200422 13:58:12.064"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:58:07.925" endtime="20200422 13:58:12.064"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:57:54.307" endtime="20200422 13:58:12.064" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200422 13:57:31.021" endtime="20200422 13:58:12.067"></status>
+</suite>
+<status status="PASS" starttime="20200422 13:57:30.987" endtime="20200422 13:58:12.073"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Login1">Tests.Login1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
